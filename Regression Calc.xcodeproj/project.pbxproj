@@ -22,6 +22,7 @@
 		E41560BE1E21C73B0038D28D /* xxx.png in Resources */ = {isa = PBXBuildFile; fileRef = E41560BD1E21C73B0038D28D /* xxx.png */; };
 		E41560C01E222D190038D28D /* calculateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41560BF1E222D190038D28D /* calculateController.swift */; };
 		E41560C21E233D5C0038D28D /* equationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41560C11E233D5C0038D28D /* equationViewController.swift */; };
+		E43EC02E1E24BD13001739F4 /* polynomialRegressionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EC02D1E24BD13001739F4 /* polynomialRegressionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E41560BD1E21C73B0038D28D /* xxx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xxx.png; sourceTree = "<group>"; };
 		E41560BF1E222D190038D28D /* calculateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calculateController.swift; sourceTree = "<group>"; };
 		E41560C11E233D5C0038D28D /* equationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = equationViewController.swift; sourceTree = "<group>"; };
+		E43EC02D1E24BD13001739F4 /* polynomialRegressionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = polynomialRegressionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				E41560991E1EC3850038D28D /* ViewController.swift */,
 				E41560C11E233D5C0038D28D /* equationViewController.swift */,
 				E41560AF1E2045FA0038D28D /* dataPointViewController.swift */,
+				E43EC02D1E24BD13001739F4 /* polynomialRegressionViewController.swift */,
 				E41560BF1E222D190038D28D /* calculateController.swift */,
 				E41560B51E218D410038D28D /* delButton.swift */,
 				E41560BB1E21BDCF0038D28D /* numberBoard.xib */,
@@ -177,6 +180,7 @@
 				E41560B01E2045FA0038D28D /* dataPointViewController.swift in Sources */,
 				E41560981E1EC3850038D28D /* AppDelegate.swift in Sources */,
 				E41560C01E222D190038D28D /* calculateController.swift in Sources */,
+				E43EC02E1E24BD13001739F4 /* polynomialRegressionViewController.swift in Sources */,
 				E41560C21E233D5C0038D28D /* equationViewController.swift in Sources */,
 				E41560B61E218D410038D28D /* delButton.swift in Sources */,
 			);

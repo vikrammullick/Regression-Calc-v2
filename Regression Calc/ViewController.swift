@@ -475,6 +475,7 @@ class ViewController: UIViewController {
         }
       
 
+        intervalLabel.superview?.bringSubview(toFront: intervalLabel)
 
         topView.superview?.bringSubview(toFront: topView)
         
@@ -522,7 +523,7 @@ class ViewController: UIViewController {
             if(self.regressionType == "polynomial" || self.regressionType == "exponential")
             {
                 graphPath.move(to: CGPoint(x: -1,y: Double(centerY)-getY(x: -gridLen-1)))
-                for temp in stride(from: 0, to: x, by: 5)
+                for temp in stride(from: 0, to: x, by: 1)
                 {
                     let ycoord : Double = getY(x: (Double(temp)-Double(centerX))/Double(centerX)*Double(currentGrid/2)*Double(self.interval))
                     graphPath.addLine(to: CGPoint(x: Double(temp),y: Double(centerY)-ycoord))
@@ -534,7 +535,7 @@ class ViewController: UIViewController {
             if(self.regressionType == "power" || self.regressionType == "logarithmic")
             {
                 graphPath.move(to: CGPoint(x: Double(x/2+1),y: Double(centerY)-getY(x: Double(0.001))))
-                for temp in stride(from: x/2+1, to: x, by: 5)
+                for temp in stride(from: x/2+1, to: x, by: 1)
                 {
                     let ycoord : Double = getY(x: (Double(temp)-Double(centerX))/Double(centerX)*Double(currentGrid/2)*Double(self.interval))
                     graphPath.addLine(to: CGPoint(x: Double(temp),y: Double(centerY)-ycoord))

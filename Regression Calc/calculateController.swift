@@ -25,6 +25,8 @@ class calculateController: UIViewController {
     @IBOutlet weak var log: UIButton!
     @IBOutlet weak var pow: UIButton!
     
+    @IBOutlet weak var poly: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,20 +43,27 @@ class calculateController: UIViewController {
             self.expon.isEnabled = false
             self.log.isEnabled = false
             self.pow.isEnabled = false
+            self.poly.isEnabled = false
         case _ where numUniqueX == 2:
             self.quad.isEnabled = false
             self.cub.isEnabled = false
             self.quar.isEnabled = false
             self.quin.isEnabled = false
+            self.poly.isEnabled = false
         case _ where numUniqueX == 3:
             self.cub.isEnabled = false
             self.quar.isEnabled = false
             self.quin.isEnabled = false
+            self.poly.isEnabled = false
         case _ where numUniqueX == 4:
             self.quar.isEnabled = false
             self.quin.isEnabled = false
+            self.poly.isEnabled = false
         case _ where numUniqueX == 5:
             self.quin.isEnabled = false
+            self.poly.isEnabled = false
+        case _ where numUniqueX == 6:
+            self.poly.isEnabled = false
         default: break}
         
         if xNonPositive
@@ -120,5 +129,14 @@ class calculateController: UIViewController {
         mainCont.drawGridandAxis()
 
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination : polynomialRegressionViewController = segue.destination as? polynomialRegressionViewController
+        {
+            destination.numUniqueX = self.numUniqueX
+            destination.mainCont = self.mainCont
+            destination.calcCont = self
+        }
+    }
+
     
 }

@@ -195,7 +195,7 @@ class dataPointViewController: UIViewController, UITextFieldDelegate {
                 }
             }
             self.mainCont.interval = interval
-            self.mainCont.intervalLabel.text = "graph square interval:\(interval)"
+            self.mainCont.intervalLabel.text = "graph square interval: \(interval)"
             
             var numLines : Double = 0
             while(numLines*interval < self.mainCont.maxDouble)
