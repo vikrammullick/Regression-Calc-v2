@@ -40,13 +40,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        drawGridandAxis()
+        drawGridandAxis(showAnimation: false)
         buttonText()
 
-        
+        graphLayer.strokeColor = UIColor.green.cgColor
+        graphLayer.fillColor = UIColor.clear.cgColor
+        graphLayer.lineWidth = 2
+    
        
-      
 
     }
     override var prefersStatusBarHidden: Bool {
@@ -490,7 +491,7 @@ class ViewController: UIViewController {
         
         rsqrd.superview?.bringSubview(toFront: rsqrd)
     }
-    func drawGridandAxis()
+    func drawGridandAxis(showAnimation: Bool)
     {
         for lne in lines 
         {
@@ -546,12 +547,19 @@ class ViewController: UIViewController {
             }
         }
 
+        //option to animate graphing
+        /*if showAnimation
+        {
+            let pathAnimation = CABasicAnimation(keyPath: "strokeEnd")
+            pathAnimation.fromValue = 0.0
+            pathAnimation.toValue = 1.0
+            pathAnimation.duration = 0.3
+            graphLayer.add(pathAnimation, forKey: "strokeEnd")
+        }*/
+        
+        
         graphLayer.path = graphPath.cgPath
-        graphLayer.strokeColor = UIColor.green.cgColor
-        graphLayer.fillColor = UIColor.clear.cgColor
-        graphLayer.lineWidth = 2
         view.layer.addSublayer(graphLayer)
-        self.view.layer.addSublayer(graphLayer)
 
         
         drawPoints()
@@ -619,10 +627,10 @@ class ViewController: UIViewController {
         
         return out
     }
+    
     func multMat(mat1: Matrix, mat2: Matrix) -> Matrix
     {
         var out = Matrix(rows: mat1.rows, columns: mat2.columns)
-
         for k in stride(from: 0, to: mat1.rows, by: 1)
         {
             for l in stride(from: 0, to: mat1.columns, by: 1)
@@ -633,11 +641,12 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
         return out
     }
+    
     func invertMat(mat: Matrix) -> Matrix
     {
+        
         var rrefMat = Matrix(rows: mat.rows, columns: mat.rows*2)
         for k in stride(from: 0, to: mat.rows, by: 1) {
             for l in stride(from: 0, to: mat.columns, by: 1) {

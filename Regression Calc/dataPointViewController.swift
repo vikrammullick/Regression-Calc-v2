@@ -209,7 +209,7 @@ class dataPointViewController: UIViewController, UITextFieldDelegate {
             
             self.mainCont.gridLen = numLines*interval
             self.mainCont.currentGrid = CGFloat(numLines*2+2)
-            self.mainCont.drawGridandAxis()
+            self.mainCont.drawGridandAxis(showAnimation: false)
 
             
         
@@ -308,7 +308,7 @@ class dataPointViewController: UIViewController, UITextFieldDelegate {
     }
     func setStyle(button : delButton)
     {
-        button.setImage(UIImage(named: "xxx")!, for: .normal)
+        button.setImage(UIImage(named: "x")!, for: .normal)
         button.contentMode = .scaleAspectFit
         button.clipsToBounds =  true
         button.layer.cornerRadius = CGFloat(deleteDiameter/2)

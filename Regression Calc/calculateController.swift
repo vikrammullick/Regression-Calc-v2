@@ -85,48 +85,48 @@ class calculateController: UIViewController {
     @IBAction func linear(_ sender: Any) {
         self.dismiss(animated: true, completion: {})
         mainCont.polynomial(exponent: 1)
-        mainCont.drawGridandAxis()
+        mainCont.drawGridandAxis(showAnimation: true)
     }
     @IBAction func quadratic(_ sender: Any) {
         self.dismiss(animated: true, completion: {})
         mainCont.polynomial(exponent: 2)
-        mainCont.drawGridandAxis()
+        mainCont.drawGridandAxis(showAnimation: true)
 
     }
     @IBAction func cubic(_ sender: Any) {
         self.dismiss(animated: true, completion: {})
         mainCont.polynomial(exponent: 3)
-        mainCont.drawGridandAxis()
+        mainCont.drawGridandAxis(showAnimation: true)
 
     }
     @IBAction func quartic(_ sender: Any) {
         self.dismiss(animated: true, completion: {})
         mainCont.polynomial(exponent: 4)
-        mainCont.drawGridandAxis()
+        mainCont.drawGridandAxis(showAnimation: true)
 
     }
     @IBAction func quintic(_ sender: Any) {
         self.dismiss(animated: true, completion: {})
         mainCont.polynomial(exponent: 5)
-        mainCont.drawGridandAxis()
+        mainCont.drawGridandAxis(showAnimation: true)
 
     }
     @IBAction func exponential(_ sender: Any) {
         self.dismiss(animated: true, completion: {})
         mainCont.exponential()
-        mainCont.drawGridandAxis()
+        mainCont.drawGridandAxis(showAnimation: true)
 
     }
     @IBAction func logarithmic(_ sender: Any) {
         self.dismiss(animated: true, completion: {})
         mainCont.logarithmic()
-        mainCont.drawGridandAxis()
+        mainCont.drawGridandAxis(showAnimation: true)
 
     }
     @IBAction func power(_ sender: Any) {
         self.dismiss(animated: true, completion: {})
         mainCont.power()
-        mainCont.drawGridandAxis()
+        mainCont.drawGridandAxis(showAnimation: true)
 
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

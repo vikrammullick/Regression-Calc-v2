@@ -36,8 +36,6 @@ class polynomialRegressionViewController: UIViewController {
         minus.layer.borderColor = plus.currentTitleColor.cgColor
 
         plus.titleLabel?.textAlignment = NSTextAlignment.center
-
-        
         
         checkEnabled()
         
@@ -80,7 +78,7 @@ class polynomialRegressionViewController: UIViewController {
         self.dismiss(animated: false, completion: {})
         calcCont.dismiss(animated: false, completion: {})
         mainCont.polynomial(exponent: power)
-        mainCont.drawGridandAxis()
+        mainCont.drawGridandAxis(showAnimation: true)
 
 
     }
